@@ -1,11 +1,9 @@
 *{
     margin: 0px;
     font-family: Arial;
-    border: border-box;
+    box-sizing: border-box;
     padding: 0px;
     text-decoration: none;
-   
-   
 }
 
 body {
@@ -14,6 +12,198 @@ body {
     margin: 0;
     padding: 0;
     
+}
+
+/* Fluid images by default */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive base: containers take full width on small screens */
+@media (max-width: 1200px) {
+    #containerlogo,
+    #container2,
+    #top,
+    #outerbox,
+    #outerbox1,
+    #outerbox2,
+    #outerbox3,
+    #outerbox4,
+    #outerbox5,
+    #lastest,
+    #innerbox9 {
+        width: 100%;
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+    #outerbox,
+    #outerbox1 {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+/* Mobile-first overrides */
+@media (max-width: 768px) {
+    /* Header */
+    #containerlogo {
+        height: auto;
+        padding: 8px 12px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    #outerlogo {
+        width: 120px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #deliver,
+    #return {
+        display: none;
+    }
+    #categoryselect {
+        height: 40px;
+        width: 56px;
+    }
+    #searchinput {
+        flex: 1 1 auto;
+        min-width: 0;
+        width: 100%;
+        height: 40px;
+        margin: 0 6px;
+    }
+    #containermag {
+        height: 40px;
+        width: 44px;
+    }
+    #signin { padding-left: 0; }
+    #box { margin-left: 8px; }
+
+    /* Top nav */
+    #container2 {
+        height: auto;
+        padding: 6px 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    #lines { margin-left: 0; }
+    .deal { display: none; }
+    #selling { margin-left: 8px; }
+
+    /* Hero */
+    #top {
+        height: 180px;
+        background-position: center;
+    }
+
+    /* Product grids */
+    #outerbox,
+    #outerbox1 {
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #innerbox1, #innerbox2, #innerbox3, #innerbox4,
+    #innerbox5, #innerbox6, #innerbox7, #innerbox8 {
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    /* Reset overly specific positioning for images and captions */
+    [id^="f"] {
+        position: static;
+        width: calc(50% - 8px);
+        height: auto;
+        margin: 6px 4px;
+        clip-path: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #secbox, #secbox1, #secbox2, #secbox3 {
+        width: 100%;
+        height: auto;
+        margin: 8px 0 0;
+        position: static;
+        top: 0;
+        left: 0;
+    }
+    [id^="firstimagedes"],
+    [id^="secondimagedes"],
+    [id^="thirdimagedes"],
+    [id^="fourthimagedes"],
+    #seemore1, #seemore2, #seemore3, #seemore4,
+    #seemore5, #seemore6, #seemore7, #seemore8 {
+        position: static;
+        left: 0;
+        top: 0;
+        display: block;
+        margin: 6px 6px 0;
+    }
+
+    /* Recently viewed */
+    #outerbox2, #innerbox9 {
+        height: auto;
+    }
+
+    /* Back to top */
+    #outerbox3 {
+        height: 40px;
+    }
+
+    /* Footer columns stack */
+    #outerbox4 {
+        height: auto;
+        flex-direction: column;
+        padding: 20px 16px;
+        align-items: flex-start;
+        gap: 18px;
+    }
+    #underwala1, #underwala2, #underwala3, #underwala4 {
+        left: 0;
+        width: 100%;
+        height: auto;
+        top: 0;
+        position: relative;
+    }
+    #outerbox5 {
+        width: 100%;
+        height: auto;
+        padding: 12px 0;
+        text-align: center;
+    }
+    #f17 {
+        left: 0;
+        margin: 0 auto;
+        position: static;
+    }
+    #lastest {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 16px;
+    }
+    #last {
+        left: 0;
+        bottom: 0;
+        position: static;
+        text-align: center;
+        margin-top: 8px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+    #outerlogo { width: 100px; }
+    #containerlogo { gap: 6px; }
+    [id^="f"] { width: 100%; margin: 6px 0; display: block; }
 }
 
 #containerlogo{
